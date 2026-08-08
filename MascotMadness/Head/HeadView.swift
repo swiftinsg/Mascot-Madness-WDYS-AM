@@ -3,6 +3,12 @@ import SwiftUI
 var head: some BodyPart {
     Head {
         ZStack {
+            Circle()
+                .frame(width: 670, height: 670)
+                .foregroundStyle(.red)
+            Circle()
+                .frame(width: 630, height: 630)
+                .foregroundStyle(.white)
             Text("▲")
                 .font(.system(size: 600))
                 .rotationEffect(Angle(degrees: 180))
