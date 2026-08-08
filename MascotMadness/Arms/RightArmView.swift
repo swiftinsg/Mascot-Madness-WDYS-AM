@@ -5,16 +5,21 @@ var rightArm: some BodyPart {
         RightUpperArmSegment {
             ZStack {
                 Rectangle()
-                    .frame(width: 30, height: 200)
+                    .frame(width: 80, height: 200)
                     .foregroundStyle(.orange)
+                    .rotationEffect(.degrees(30))
+                    
             }
         }
     } foreArm: {
         RightLowerArmSegment {
             ZStack {
                 Rectangle()
-                    .frame(width: 30, height: 200)
+                    .frame(width: 50, height: 200)
                     .foregroundStyle(.red)
+                    .rotationEffect(.degrees(30))
+                    .offset(x:-100, y:-30)
+                
             }
         }
     }
