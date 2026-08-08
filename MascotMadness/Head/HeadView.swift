@@ -3,14 +3,39 @@ import SwiftUI
 var head: some BodyPart {
     Head {
         ZStack {
+            Text("▲")
+                .font(.system(size: 600))
+                .rotationEffect(Angle(degrees: 180))
+                .foregroundStyle(.red)
+            
             Circle()
                 .frame(width: 400, height: 400)
                 .foregroundStyle(.red)
-            Circle()
-                .frame(width: 100, height: 100)
-                .foregroundStyle(.white)
-                .foregroundStyle(.white)
-            
+            VStack {
+                
+                
+                HStack{
+                    Circle()
+                        .frame(width: 60, height: 60)
+                        .foregroundStyle(.white)
+                        .foregroundStyle(.white)
+                    
+                        .padding(.trailing,50)
+                    Circle()
+                        .frame(width: 60, height: 60)
+                        .foregroundStyle(.white)
+                        .foregroundStyle(.white)
+                        .padding(.leading, 50)
+                    
+                    
+                    
+                }
+                Text("˕")
+                    .padding(.top,-90)
+                    .foregroundStyle(.white)
+                    .font(.system(size: 100))
+                   
+            }
         }
     }
 }
