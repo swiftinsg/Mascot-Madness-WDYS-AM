@@ -4,12 +4,12 @@ var legs: some BodyPart {
     Legs {
         ZStack {
             LegLimb()
-                .offset(x: -30)
+                .offset(x: -36)
             LegLimb()
-                .offset(x: 30)
+                .offset(x: 36)
 
             SGBadge()
-                .offset(x: 30, y: -63)
+                .offset(x: 36, y: -70)
         }
         .frame(width: 200, height: 200)
     }
@@ -23,28 +23,28 @@ private struct LegLimb: View {
             VStack(spacing: 0) {
                 Rectangle()
                     .fill(.white)
-                    .frame(height: 6)
+                    .frame(height: 8)
 
                 Rectangle()
                     .fill(.red)
-                    .frame(height: 34)
+                    .frame(height: 40)
 
                 Rectangle()
                     .fill(skinTone)
-                    .frame(height: 74)
+                    .frame(height: 86)
 
                 ZStack(alignment: .top) {
                     Rectangle()
                         .fill(.white)
                     Rectangle()
                         .fill(.red)
-                        .frame(height: 6)
-                        .padding(.top, 10)
+                        .frame(height: 7)
+                        .padding(.top, 11)
                 }
-                .frame(height: 34)
+                .frame(height: 38)
             }
-            .frame(width: 46)
-            .clipShape(RoundedRectangle(cornerRadius: 18))
+            .frame(width: 56)
+            .clipShape(RoundedRectangle(cornerRadius: 22))
 
             Sneaker()
                 .padding(.top, -6)
@@ -55,12 +55,12 @@ private struct LegLimb: View {
 private struct Sneaker: View {
     var body: some View {
         VStack(spacing: 0) {
-            RoundedRectangle(cornerRadius: 10)
+            RoundedRectangle(cornerRadius: 12)
                 .fill(.red)
-                .frame(width: 58, height: 20)
-            RoundedRectangle(cornerRadius: 4)
+                .frame(width: 66, height: 24)
+            RoundedRectangle(cornerRadius: 5)
                 .fill(.white)
-                .frame(width: 58, height: 8)
+                .frame(width: 66, height: 10)
         }
     }
 }
@@ -71,11 +71,11 @@ private struct SGBadge: View {
             ZStack {
                 Circle()
                     .fill(.white)
-                    .frame(width: 14, height: 14)
+                    .frame(width: 17, height: 17)
                 Circle()
                     .fill(.red)
-                    .frame(width: 11, height: 11)
-                    .offset(x: 4)
+                    .frame(width: 13, height: 13)
+                    .offset(x: 5)
             }
 
             VStack(spacing: 1) {
@@ -95,7 +95,7 @@ private struct SGBadge: View {
     private func star() -> some View {
         Image(systemName: "star.fill")
             .resizable()
-            .frame(width: 3.5, height: 3.5)
+            .frame(width: 4.5, height: 4.5)
             .foregroundStyle(.white)
     }
 }
