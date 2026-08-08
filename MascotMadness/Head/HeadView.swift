@@ -4,8 +4,13 @@ var head: some BodyPart {
     Head {
         ZStack {
             Circle()
-                .frame(width: 200, height: 200)
-                .foregroundStyle(.yellow)
+                .frame(width: 400, height: 400)
+                .foregroundStyle(.red)
+            Circle()
+                .frame(width: 100, height: 100)
+                .foregroundStyle(.white)
+                .foregroundStyle(.white)
+            
         }
     }
 }
